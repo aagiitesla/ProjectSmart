@@ -1,0 +1,2 @@
+configurations.create("default")
+artifacts.add("default", file('materialdrawer-2.9.8-javadoc.jar'))

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ProjectSmart</string>
+    <string name="Home">Home</string>
+    <string name="Menu1">Menu1</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="title_activity_teacherinfo">Teacherinfo</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_home">Home</string>
+</resources>

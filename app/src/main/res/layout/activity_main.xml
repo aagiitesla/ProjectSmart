@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <android.support.v4.widget.DrawerLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- This LinearLayout represents the contents of the screen  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- The ActionBar displayed at the top -->
+            <include
+                layout="@layout/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- The main content view where fragments are loaded -->
+            <FrameLayout
+                android:id="@+id/flContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="Name"
+                    android:ems="10"
+                    android:id="@+id/editText"
+                    android:layout_below="@+id/textView"
+                    android:layout_toRightOf="@+id/textView"
+                    android:layout_toEndOf="@+id/textView"
+                    android:layout_marginTop="50dp"
+                    android:layout_gravity="center_horizontal|top" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/editText2"
+                    android:layout_below="@+id/editText"
+                    android:layout_alignLeft="@+id/editText"
+                    android:layout_alignStart="@+id/editText"
+                    android:layout_gravity="center_horizontal|top" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Button"
+                    android:id="@+id/button"
+                    android:layout_centerVertical="true"
+                    android:layout_alignLeft="@+id/editText2"
+                    android:layout_alignStart="@+id/editText2"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Large Text"
+                    android:id="@+id/textView2"
+                    android:layout_below="@+id/button"
+                    android:layout_toRightOf="@+id/textView"
+                    android:layout_toEndOf="@+id/textView"
+                    android:layout_marginTop="72dp"
+                    android:layout_gravity="center_horizontal|bottom" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- The navigation drawer that comes from the left -->
+        <!-- Note that `android:layout_gravity` needs to be set to 'start' -->
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nvView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@android:color/white"
+            app:menu="@menu/menu_main"
+            app:headerLayout="@layout/header"/>
+    </android.support.v4.widget.DrawerLayout>
+</RelativeLayout>
